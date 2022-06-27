@@ -22,3 +22,16 @@ for i in range(len(result_list)):
         print(i + 1, end = ' ')
 #print(result)
 # []를 어떻게 벗겨내지 ?
+
+
+'''
+Best_Solution
+cnt = [0] * (M + N + 3) # 넉넉하게 배열 생성
+for i in range(1, N + 1):
+    for j in range(1, M + 1):
+        cnt[i+j] += 1
+val = max(cnt)
+for i in range(len(cnt)):
+    if val == cnt[i]:
+        print(i, end = ' ')
+'''
