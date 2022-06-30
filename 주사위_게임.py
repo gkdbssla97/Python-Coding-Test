@@ -4,9 +4,11 @@ max_list = []
 for i in range(N):
     dice = list(map(int, input().split()))
     if dice[0] == dice[1] == dice[2]:
-        max_list.append(10000 + dice[0] * 1000)
+        print(1)
+        #max_list.append(10000 + dice[0] * 1000)
     elif dice[0] != dice[1] != dice[2]:
-        max_list.append(max(dice) * 100)
+        #max_list.append(max(dice) * 100)
+        print(2)
     else:
         if dice[0] == dice[1] or dice[0] == dice[2]:
             max_list.append(1000 + dice[0] * 100)
