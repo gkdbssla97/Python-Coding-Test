@@ -1,7 +1,8 @@
 str = input()
 num = ""
 for i in str:
-    if i >= '0' and i <= '9':
+    #if i >= '0' and i <= '9':
+    if i.isdigit():
         num += i
 num = int(num)
 print(num)
