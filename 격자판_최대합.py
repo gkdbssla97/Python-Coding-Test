@@ -13,29 +13,25 @@ for i in range(N):
     #print(tmp)
     if tmp > row_max:
         row_max = tmp
-print(row_max)
+#print(row_max)
 #열
 col_max = 0
-tmp = []
+tmp = 0
 for i in range(N):
-    col = cube[i]
-    tmp += col[0:N]
-    print(tmp)
-    # if tmp > col_max:
-    #     col_max = tmp
-print(col_max)
-
-cross_max = 0
+    for j in range(N):
+        tmp += cube[j][i]
+    if col_max < tmp:
+        col_max = tmp
+    tmp = 0
+#print(col_max)
+#대각선
+tmp1, tmp2 = 0, 0
 for i in range(N):
-    cross1 = cube[i]
-    tmp1 = cross1[i]
-    cross2 = cube[i][N - i - 1]
-    tmp2 = cross2[]
-    print(tmp)
-    # if tmp > col_max:
-    #     col_max = tmp
+    tmp1 += cube[i][i]
+for i in range(N):
+    tmp2 += cube[N - 1 - i][N - 1 - i]
 
-print(cube)
+print(max(row_max, col_max, tmp1, tmp2))
 
 '''
 5
