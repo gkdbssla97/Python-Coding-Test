@@ -18,6 +18,7 @@ for i in range(7):
             cnt += 1
         tmp2.clear()
 print(cnt)
+# 행/열 for 문 중첩 하나로 합칠 순 없을까?
 '''
 2 4 1 5 3 2 6
 3 5 1 8 7 1 7
