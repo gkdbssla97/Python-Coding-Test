@@ -28,8 +28,7 @@ for i in range(N):
 tmp1, tmp2 = 0, 0
 for i in range(N):
     tmp1 += cube[i][i]
-for i in range(N):
-    tmp2 += cube[N - 1 - i][N - 1 - i]
+    tmp2 += cube[i][N - 1 - i]
 
 print(max(row_max, col_max, tmp1, tmp2))
 
