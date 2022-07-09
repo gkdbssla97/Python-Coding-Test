@@ -11,7 +11,19 @@ for i in range(0, N//2):
     get_apple += sum(apple_tree[N - i - 1][N//2 - i:N//2 + 1 + i])
     #print(f'apple_bottom:{get_apple}')
 get_apple += sum(apple_tree[N//2])
-
+'''
+res = 0
+s=e=n//2
+for i in range(N):
+    for j in range(s, e+1):
+        res += apple_tree[i][j]
+    if i < N // 2:
+        s -= 1
+        e += 1
+    else:
+        s += 1
+        e -= 1
+'''
     # 2: 3
     # 1: 4
 print(get_apple)
