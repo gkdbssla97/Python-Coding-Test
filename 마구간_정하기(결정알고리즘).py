@@ -35,9 +35,9 @@ while True:
         if abs(tmp - i) >= mid:
             cnt += 1
             tmp = i
-    if cnt < mid:
+    if cnt < C:
         rt = mid - 1
-    elif cnt >= mid:
+    elif cnt >= C:
         res = mid
         lt = mid + 1
     if lt > rt:
