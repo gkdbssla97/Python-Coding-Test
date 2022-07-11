@@ -23,6 +23,7 @@ else:
             max_distance = val
     print(max_distance)
 '''
+#위의 combination은 시간초과
 lt = 1
 rt = max(location)
 location.sort()
@@ -43,6 +44,7 @@ while True:
     if lt > rt:
         break
 print(res)
+#가장 가까운 두 말의 최대 거리
 '''
 5 3
 1
