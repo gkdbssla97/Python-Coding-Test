@@ -20,10 +20,9 @@ for i in range(len(steel)):
     if steel[i] == '(':
         stack.append(steel[i])
     else:
+        stack.pop()
         if steel[i-1] == '(':
-            stack.pop()
             cnt += len(stack)
         else:
-            stack.pop()
             cnt += 1
 print(cnt)
