@@ -5,7 +5,7 @@ N = int(input())
 
 
 for i in range(N):
-    idx = flag = 0
+    idx = 0
     subject = deque(input())
     for x in subject:
         if x == essential[idx]:
