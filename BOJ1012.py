@@ -21,7 +21,6 @@ def bfs(x, y):
     q = deque([(x, y)])
     while q:
         x, y = q.popleft()
-
         for i in range(4):
             ny, nx = y + dy[i], x + dx[i]
             if M > nx >= 0 and N > ny >= 0 and vechu[ny][nx] == 1:
