@@ -9,7 +9,6 @@ def dfs(x, y):
         mm[graph[x][0] - 1][graph[x][1] - 1] = graph[x][2]
         dfs(x + 1, y)
 
-
 graph = []
 for i in range(M):
      graph.append(list(map(int, input().split())))
