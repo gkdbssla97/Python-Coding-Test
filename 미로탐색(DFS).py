@@ -8,11 +8,10 @@ dy = [0, 1, 0, -1]
 
 def dfs(x, y):
     global cnt
-    ch[x][y] = 1
+    #ch[x][y] = 1
     print(f'x:{x} y:{y}')
     if x == 6 and y == 6:
         cnt += 1
-
     else:
         for i in range(4):
             nx = x + dx[i]
@@ -24,6 +23,7 @@ def dfs(x, y):
 
 
 cnt = 0
+ch[0][0] = 1
 dfs(0, 0)
 print(cnt)
 '''
