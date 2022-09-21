@@ -20,6 +20,7 @@ def pick_M(v, s):
             #print(x1, y1)
             min_val = 2147000000
             for j in ch:
+                print(j)
                 x2 = p_pizza[j][0]
                 y2 = p_pizza[j][1]
                 min_val = min(min_val, abs(x1 - x2) + abs(y1 - y2))
