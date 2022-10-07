@@ -21,15 +21,15 @@ def dfs(x, y):
 
 res = 0
 cnt_list = []
-for i in range(N):
+for idx in range(N):
     for j in range(N):
-        if apt[i][j] == 1 and ch[i][j] == 0:
+        if apt[idx][j] == 1 and ch[idx][j] == 0:
             cnt = 0
-            dfs(i, j)
+            dfs(idx, j)
             cnt_list.append(cnt)
 print(len(cnt_list))
-for i in sorted(cnt_list):
-    print(i)
+for idx in sorted(cnt_list):
+    print(idx)
 '''
 7
 0110100

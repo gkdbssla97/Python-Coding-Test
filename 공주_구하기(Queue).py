@@ -2,7 +2,7 @@ from collections import deque
 
 N, K = map(int, input().split())
 
-prince = list(i for i in range(1, N + 1))
+prince = list(idx for idx in range(1, N + 1))
 prince = deque(prince)
 #print(prince)
 

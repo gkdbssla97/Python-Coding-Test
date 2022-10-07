@@ -17,7 +17,7 @@ max_val = max(num)
 total = sum(num)
 switch = 0
 
-for i in num:
+for idx in num:
     ch = [0 for _ in range(max_val + 1)]
     dfs(0, 0)
 

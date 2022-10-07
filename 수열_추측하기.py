@@ -22,7 +22,7 @@ ch = [0 for _ in range(F + 1)]
 p = [1 for _ in range(N)]
 num = [0 for _ in range(N)]
 
-for i in range(1, N):
-    p[i] = p[i - 1] * (N - i) // i
+for idx in range(1, N):
+    p[idx] = p[idx - 1] * (N - idx) // idx
 
 dfs(0, 0)

@@ -32,9 +32,9 @@ while True:
             pick.append(natural.popleft())
         else:
             break
-for i in res:
-    if i == 'L' or i == 'R':
-        print(i, end = '')
+for idx in res:
+    if idx == 'L' or idx == 'R':
+        print(idx, end ='')
 '''
 5
 2 4 5 1 3

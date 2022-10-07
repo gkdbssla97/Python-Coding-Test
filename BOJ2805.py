@@ -9,9 +9,9 @@ while s <= e:
     sum = 0
     mid = (s + e) // 2
     #print(f'mid:{mid}')
-    for i in tree:
-        if i > mid:
-            sum += i - mid
+    for idx in tree:
+        if idx > mid:
+            sum += idx - mid
     #print(f'sum:{sum}')
     if M <= sum:
         s = mid + 1

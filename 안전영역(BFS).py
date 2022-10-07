@@ -27,10 +27,10 @@ def bfs(x, y, height):
 for height in range(1, 101):
     cnt = 0
     ch = [[0] * N for _ in range(N)]
-    for i in range(N):
+    for idx in range(N):
         for j in range(N):
-            if area[i][j] > height and ch[i][j] == 0:
-                bfs(i, j, height)
+            if area[idx][j] > height and ch[idx][j] == 0:
+                bfs(idx, j, height)
                 cnt += 1
     if max < cnt:
         max = cnt

@@ -20,23 +20,23 @@ def dfs(x, y):
             val += 1
             dfs(nx, ny)
 
-for i in range(K):
-    for j in range(square[i][1], square[i][3]):
-        for k in range(square[i][0], square[i][2]):
+for idx in range(K):
+    for j in range(square[idx][1], square[idx][3]):
+        for k in range(square[idx][0], square[idx][2]):
             board[j][k] = 1
 # for m in range(M):
 #     print(board[m])
 
 cnt = 0
 size = []
-for i in range(M):
+for idx in range(M):
     for j in range(N):
-        if board[i][j] == 0:
+        if board[idx][j] == 0:
             val = 1
             cnt += 1
-            dfs(i, j)
+            dfs(idx, j)
             size.append(val)
 print(cnt)
 size.sort()
-for i in size:
-    print(i, end = ' ')
+for idx in size:
+    print(idx, end =' ')

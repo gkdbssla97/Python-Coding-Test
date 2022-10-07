@@ -22,17 +22,17 @@ square = [list(map(int, input().split())) for _ in range(K)]
 area = [[0] * N for _ in range(M)]
 
 for num in range(K):
-    for i in range(square[num][0], square[num][2]):
+    for idx in range(square[num][0], square[num][2]):
         for j in range(square[num][1], square[num][3]):
-            area[j][i] = 1
+            area[j][idx] = 1
 cnt = 0
 square_area = 1
 ans = []
-for i in range(M):
+for idx in range(M):
     for j in range(N):
-        if area[i][j] == 0:
+        if area[idx][j] == 0:
             cnt += 1
-            dfs(i, j)
+            dfs(idx, j)
             ans.append(square_area)
             square_area = 1
 ans.sort()

@@ -9,10 +9,10 @@ for s in tmp:
     else:
         count[s] = [1, idx]
         idx += 1
-numbers = [[i, j] for i, j in count.items()]
+numbers = [[idx, j] for idx, j in count.items()]
 numbers.sort(key=lambda x:(-x[1][0], x[1][1]))
 
 res = []
-for i, j in numbers:
-    res += [i] * j[0]
+for idx, j in numbers:
+    res += [idx] * j[0]
 print(*res)

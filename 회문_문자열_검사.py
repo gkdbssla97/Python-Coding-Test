@@ -1,6 +1,6 @@
 import sys
 N = int(input())
-for i in range(N):
+for idx in range(N):
     str = input()
     str = str.upper()
     # r_str = ""
@@ -8,7 +8,7 @@ for i in range(N):
     #     r_str += j
     # #print(r_str)
     if str == str[::-1]:
-        print(f'#{i + 1} YES')
+        print(f'#{idx + 1} YES')
     else:
-        print(f'#{i + 1} NO')
+        print(f'#{idx + 1} NO')
 

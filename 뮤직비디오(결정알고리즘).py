@@ -9,12 +9,12 @@ while True:
     sum = 0
     cnt = 1
     mid = (s + e) // 2
-    for i in MV:
-        if sum + i > mid:
+    for idx in MV:
+        if sum + idx > mid:
             cnt += 1
-            sum = i
+            sum = idx
         else:
-            sum += i
+            sum += idx
     if cnt <= M:
         res = mid
         e = mid - 1

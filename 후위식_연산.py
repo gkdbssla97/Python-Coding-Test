@@ -10,13 +10,13 @@ def cal(i, a, b):
 calculator = input()
 
 stack = []
-for i in calculator:
-    if i.isdigit():
-        stack.append(i)
+for idx in calculator:
+    if idx.isdigit():
+        stack.append(idx)
     else:
         a = stack.pop()
         b = stack.pop()
-        stack.append(cal(i, int(a), int(b)))
+        stack.append(cal(idx, int(a), int(b)))
 
 print(stack[-1])
 

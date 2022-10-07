@@ -16,12 +16,12 @@ cnt = 0
 #         cnt += 1
 #         print(f'#1:{cnt}')
 #     tmp = x
-for i in range(len(steel)):
-    if steel[i] == '(':
-        stack.append(steel[i])
+for idx in range(len(steel)):
+    if steel[idx] == '(':
+        stack.append(steel[idx])
     else:
         stack.pop()
-        if steel[i-1] == '(':
+        if steel[idx - 1] == '(':
             cnt += len(stack)
         else:
             cnt += 1

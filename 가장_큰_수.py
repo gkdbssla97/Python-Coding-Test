@@ -8,7 +8,7 @@ print(M)
 #max_val = max(M)
 cnt = 0
 stack = []
-i = 0
+idx = 0
 
 # while cnt != N:
 #     #print(M[i], M[i + 1])
@@ -38,8 +38,8 @@ for x in M:
 if N != 0:
     stack = stack[:-N]
 
-for i in stack:
-    print(i, end = '')
+for idx in stack:
+    print(idx, end ='')
 '''
 5276823 3
 '''

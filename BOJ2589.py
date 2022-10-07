@@ -28,9 +28,9 @@ def bfs(x, y):
         res = tmp
 
 res = 0
-for i in range(M):
+for idx in range(M):
     for j in range(N):
-        if board[i][j] == 'L':
-            bfs(i, j)
+        if board[idx][j] == 'L':
+            bfs(idx, j)
             ch = [[0] * N for _ in range(M)]
 print(res - 1)

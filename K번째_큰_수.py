@@ -3,10 +3,10 @@ card = list(map(int, input().split()))
 
 #result = []
 result = set() #중복 제거
-for i in range(0, len(card)):
-    for j in range(i+1, len(card)):
+for idx in range(0, len(card)):
+    for j in range(idx + 1, len(card)):
         for k in range(j+1, len(card)):
-            val = card[i] + card[j] + card[k]
+            val = card[idx] + card[j] + card[k]
             result.add(val) #set은 append 아니고 add
 
 result = list(result) #set을 list 자료형으로 변경

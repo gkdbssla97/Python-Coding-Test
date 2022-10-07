@@ -9,15 +9,15 @@ move_cnt = 0
 s = 1
 e = M
 
-for i in range(J):
-    if s <= apple[i] <= e:
+for idx in range(J):
+    if s <= apple[idx] <= e:
         continue
-    elif e < apple[i]:
-        move_cnt += apple[i] - e
-        e = apple[i]
+    elif e < apple[idx]:
+        move_cnt += apple[idx] - e
+        e = apple[idx]
         s = e - (M - 1)
-    elif s > apple[i]:
-        move_cnt += s - apple[i]
-        s = apple[i]
+    elif s > apple[idx]:
+        move_cnt += s - apple[idx]
+        s = apple[idx]
         e = s + (M - 1)
 print(move_cnt)

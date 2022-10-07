@@ -19,9 +19,9 @@ max_val = 0
 for x in tmp:
     if max_val < x:
         max_val = x
-for i in range(len(tmp)):
-    if max_val == tmp[i]:
-        print(num[i], end = ' ')
+for idx in range(len(tmp)):
+    if max_val == tmp[idx]:
+        print(num[idx], end =' ')
         break
 
 '''  

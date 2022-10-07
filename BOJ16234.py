@@ -31,12 +31,12 @@ global add
 while True:
     flag = 0
     none = 0
-    for i in range(N):
+    for idx in range(N):
         for j in range(N):
-            if ch[i][j] == 0:
-                ch[i][j] = 1
+            if ch[idx][j] == 0:
+                ch[idx][j] = 1
                 sum = 0
-                dfs(i, j)
+                dfs(idx, j)
                 for x, y in able:
                     sum += board[x][y]
                 #print(f'able:{able}')

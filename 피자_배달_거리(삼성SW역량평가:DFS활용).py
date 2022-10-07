@@ -5,12 +5,12 @@ p_pizza = []
 p_house = []
 
 # 중복조합으로 피자집 M개 선출
-for i in range(N):
+for idx in range(N):
     for j in range(N):
-        if pizza[i][j] == 1:
-            p_house.append((i, j))
-        elif pizza[i][j] == 2:
-            p_pizza.append((i, j))
+        if pizza[idx][j] == 1:
+            p_house.append((idx, j))
+        elif pizza[idx][j] == 2:
+            p_pizza.append((idx, j))
 
 def pick_M(v, s):
     global res

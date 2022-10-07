@@ -2,9 +2,9 @@ N = int(input())
 
 word = []
 comp = []
-for i in range(N):
+for idx in range(N):
     word.append(input())
-for i in range(N-1):
+for idx in range(N - 1):
     comp.append(input())
 
 print(word)

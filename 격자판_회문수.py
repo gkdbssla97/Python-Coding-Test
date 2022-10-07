@@ -2,18 +2,18 @@ palindrome = [list(map(int, input().split())) for _ in range(7)]
 
 cnt = 0
 #행
-for i in range(7):
+for idx in range(7):
     for j in range(3):
-        tmp1 = palindrome[i][j:j+5]
+        tmp1 = palindrome[idx][j:j + 5]
         if tmp1 == tmp1[::-1]:
             #print(tmp, tmp[::-1])
             cnt += 1
 #열
-for i in range(7):
+for idx in range(7):
     tmp2 = []
     for j in range(3):
         for k in range(5):
-            tmp2.append(palindrome[j+k][i])
+            tmp2.append(palindrome[j+k][idx])
         if tmp2 == tmp2[::-1]:
             cnt += 1
         tmp2.clear()

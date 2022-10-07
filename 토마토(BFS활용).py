@@ -32,18 +32,18 @@ elif all(1 not in l for l in tomato):
     print(-1)
     exit(0)
 else:
-    for i in range(N):
+    for idx in range(N):
         for j in range(M):
-            if tomato[i][j] == 1:
-               q.append((i, j))
+            if tomato[idx][j] == 1:
+               q.append((idx, j))
     bfs(q)
-for i in range(N):
-    print(ch[i])
+for idx in range(N):
+    print(ch[idx])
 res = 0
-for i in range(N):
+for idx in range(N):
     for j in range(M):
-        if res < ch[i][j]:
-            res = ch[i][j]
+        if res < ch[idx][j]:
+            res = ch[idx][j]
 print(res)
 '''
 6 4

@@ -2,11 +2,11 @@ N, K = map(int, input().split())
 
 num = []
 cnt = 0
-for i in range(1, N + 1):
-    if N % i == 0:
+for idx in range(1, N + 1):
+    if N % idx == 0:
         cnt += 1
     if cnt == K:
-        print(i)
+        print(idx)
         break
 else:
     print(-1)

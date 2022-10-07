@@ -7,7 +7,7 @@ gam = [list(map(int, input().split())) for _ in range(N)]
 # 위와 같이 한 줄로 나타낼 수 있음
 
 M = int(input())
-for i in range(M):
+for idx in range(M):
     cmd = list(map(int, input().split()))
     # cmd-> 행, 왼/오, x만큼 이동
     sub_gam = deque(gam[cmd[0] - 1])
@@ -20,9 +20,9 @@ for i in range(M):
             sub_gam.appendleft(sub_gam.pop())
         gam[cmd[0] - 1] = list(sub_gam)
 total_gam = 0
-for i in range(N//2):
-    total_gam += sum(gam[i][0 + i:N - i])
-    total_gam += sum(gam[N - 1 - i][0 + i:N - i])
+for idx in range(N // 2):
+    total_gam += sum(gam[idx][0 + idx:N - idx])
+    total_gam += sum(gam[N - 1 - idx][0 + idx:N - idx])
 total_gam += gam[N//2][N//2]
 print(total_gam)
 '''

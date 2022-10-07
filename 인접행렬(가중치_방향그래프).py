@@ -1,5 +1,5 @@
 N, M = map(int, input().split())
-mm = [[0] * N for i in range(N)]
+mm = [[0] * N for idx in range(N)]
 #print(mm)
 
 def dfs(x, y):
@@ -10,7 +10,7 @@ def dfs(x, y):
         dfs(x + 1, y)
 
 graph = []
-for i in range(M):
+for idx in range(M):
      graph.append(list(map(int, input().split())))
 
 

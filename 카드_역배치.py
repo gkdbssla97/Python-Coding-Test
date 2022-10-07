@@ -15,7 +15,7 @@ for i in range(1, 11):
     #print(f'#{i + 1}: {card}')
 print(card)
 '''
-for i in range(1, 11):
+for idx in range(1, 11):
     ai, bi = map(int, input().split())
     #idx = 1
     # for k in range(ai, ((ai + bi) // 2) + 1):
@@ -24,7 +24,7 @@ for i in range(1, 11):
     #     idx += 1
     for j in range((bi - ai + 1) // 2):
         card[ai + j], card[bi - j] = card[bi - j], card[ai + j]
-    print(f'#{i}: {card}')
+    print(f'#{idx}: {card}')
         # 5 6 7 8 9 10
         # 4 5 6 7 8 9 - idx
     #print(f'#{i + 1}: {card}')

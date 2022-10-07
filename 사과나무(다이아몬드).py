@@ -5,10 +5,10 @@ for _ in range(N):
     apple_tree.append(list(map(int, input().split())))
 
 get_apple = 0
-for i in range(0, N//2):
-    get_apple += sum(apple_tree[i][N//2 - i:N//2 + 1 + i])
+for idx in range(0, N // 2):
+    get_apple += sum(apple_tree[idx][N // 2 - idx:N // 2 + 1 + idx])
     #print(f'apple_top:{get_apple}')
-    get_apple += sum(apple_tree[N - i - 1][N//2 - i:N//2 + 1 + i])
+    get_apple += sum(apple_tree[N - idx - 1][N // 2 - idx:N // 2 + 1 + idx])
     #print(f'apple_bottom:{get_apple}')
 get_apple += sum(apple_tree[N//2])
 '''

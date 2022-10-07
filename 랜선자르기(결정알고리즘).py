@@ -11,8 +11,8 @@ while True:
     mid = (s + e) // 2
     print(f'mid1:{mid} s,e {s} {e}')
     #print(mid)
-    for i in LAN:
-        sum += i // mid
+    for idx in LAN:
+        sum += idx // mid
     if sum < N:
         e = mid - 1
     elif sum >= N:

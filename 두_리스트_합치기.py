@@ -10,22 +10,22 @@ M_list = list(map(int, input().split()))
 #             N_list[j], N_list[j + 1] = N_list[j + 1], N_list[j]
 min_len = min(N, M)
 result_list = []
-i, j = 0, 0
+idx, j = 0, 0
 #print(min_len)
 for num in range(min_len):
-    if N_list[i] < M_list[j]:
-        result_list.append(N_list[i])
-        i += 1
-    elif N_list[i] > M_list[j]:
+    if N_list[idx] < M_list[j]:
+        result_list.append(N_list[idx])
+        idx += 1
+    elif N_list[idx] > M_list[j]:
         result_list.append(M_list[j])
         j += 1
     else:
-        result_list.append(N_list[i])
-        i += 1
+        result_list.append(N_list[idx])
+        idx += 1
         j += 1
     #print(num)
-if i < N:
-    result_list += N_list[i:]
+if idx < N:
+    result_list += N_list[idx:]
 if j < M:
     result_list += M_list[j:]
 for x in result_list:

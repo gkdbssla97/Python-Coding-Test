@@ -9,14 +9,14 @@ ch = [[0] * N for _ in range(N)]
 min = 2147000000
 max = -2147000000
 global min_x, min_y, max_x, max_y
-for i in range(len(mountain)):
+for idx in range(len(mountain)):
     for j in range(len(mountain)):
-        if min > mountain[i][j]:
-            min = mountain[i][j]
-            min_x, min_y = i, j
-        if max < mountain[i][j]:
-            max = mountain[i][j]
-            max_x, max_y = i, j
+        if min > mountain[idx][j]:
+            min = mountain[idx][j]
+            min_x, min_y = idx, j
+        if max < mountain[idx][j]:
+            max = mountain[idx][j]
+            max_x, max_y = idx, j
 print(min_x, min_y)
 print(max_x, max_y)
 def dfs(x, y):

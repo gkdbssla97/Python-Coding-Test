@@ -23,10 +23,10 @@ def bfs(x, y):
                     q.append((nx, ny))
 
 cnt_list = 0
-for i in range(N):
+for idx in range(N):
     for j in range(N):
-        if island[i][j] == 1 and ch[i][j] == 0:
-            bfs(i, j)
+        if island[idx][j] == 1 and ch[idx][j] == 0:
+            bfs(idx, j)
             cnt_list += 1
 
 print(cnt_list)

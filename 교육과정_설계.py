@@ -4,17 +4,17 @@ essential = deque(input())
 N = int(input())
 
 
-for i in range(N):
+for idx in range(N):
     idx = 0
     subject = deque(input())
     for x in subject:
         if x == essential[idx]:
             idx += 1
         elif x in essential:
-            print(f'#{i + 1} NO')
+            print(f'#{idx + 1} NO')
             break
         if idx == len(essential):
-            print(f'#{i + 1} YES')
+            print(f'#{idx + 1} YES')
             break
 '''
 CBA

@@ -8,12 +8,12 @@ T = int(input())
 #     result.sort()
 #     print(f'#{i+1} {result[k - 1]}')
 #     result = []
-for i in range(T):
+for idx in range(T):
     N, s, e, k = map(int, input().split())
     num = list(map(int, input().split()))
     num = num[s-1:e]
     num.sort()
-    print(f'#{i + 1} {num[k - 1]}')
+    print(f'#{idx + 1} {num[k - 1]}')
     #num = []
 '''
 2

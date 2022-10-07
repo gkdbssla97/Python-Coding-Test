@@ -1,10 +1,10 @@
 N = int(input())
 
 p = dict()
-for i in range(N):
+for idx in range(N):
     word = input()
     p[word] = 1
-for i in range(N-1):
+for idx in range(N - 1):
     word = input()
     p[word] = 0
 print(p.items())

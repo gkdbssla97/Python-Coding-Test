@@ -8,16 +8,16 @@ def fib(stack[num][n]):
 
 tmp = list(map(int, input().split()))
 queries = []
-i = 0
-while i < len(tmp) - 1:
-    a, b = tmp[i], tmp[i + 1]
+idx = 0
+while idx < len(tmp) - 1:
+    a, b = tmp[idx], tmp[idx + 1]
     queries.append([a, b])
-    i += 2
+    idx += 2
 
 stack = [[] * 1000 for _ in range(10000)]
 
-for i in range(len(queries)):
-    stack[queries[i][0]].append(queries[i][1])
+for idx in range(len(queries)):
+    stack[queries[idx][0]].append(queries[idx][1])
 
 num = 0
 res_sum = 0
@@ -32,20 +32,20 @@ while num < 1000:
             tmp1_1 = 0
             size = 1
             tmp2 = 1
-            for i in range(0, leng - 1):
-                if i == leng:
+            for idx in range(0, leng - 1):
+                if idx == leng:
                     break
-                tmp1 = stack[num][i]
-                tmp1_1 += stack[num][i]
+                tmp1 = stack[num][idx]
+                tmp1_1 += stack[num][idx]
                 #print(f'tmp1:{tmp1}')
-                tmp2 = tmp1_1 + stack[num][i + 1]
+                tmp2 = tmp1_1 + stack[num][idx + 1]
                 if size < tmp2:
                     while size < tmp2:
                         size = size * 2
                     print(f'size:{size}')
-                res = fib(stack[num][i])
+                res = fib(stack[num][idx])
                 print(f'res:{res}')
-                print(f'i:{i}')
+                print(f'i:{idx}')
         else:
             continue
     num += 1

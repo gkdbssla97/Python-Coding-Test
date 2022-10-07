@@ -17,9 +17,9 @@ def dfs(x, y):
             dfs(x - 1, y)
 
 global start, end
-for i in range(10):
-    if ladder[9][i] == 2:
-        dfs(9, i)
+for idx in range(10):
+    if ladder[9][idx] == 2:
+        dfs(9, idx)
 
 '''
 1 0 1 0 0 1 0 1 0 1

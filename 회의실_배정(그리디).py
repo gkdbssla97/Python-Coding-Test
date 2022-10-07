@@ -2,9 +2,9 @@ N = int(input())
 
 conference = [list(map(int, input().split())) for _ in range(N)]
 start = end = []
-for i in range(len(conference)):
-    start.append(conference[i][0])
-    end.append(conference[i][1])
+for idx in range(len(conference)):
+    start.append(conference[idx][0])
+    end.append(conference[idx][1])
 
 #conference.sort()
 conference.sort(key = lambda x: (x[1], x[0]))

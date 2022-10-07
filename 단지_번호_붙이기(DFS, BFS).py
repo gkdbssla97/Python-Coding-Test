@@ -9,10 +9,10 @@ def dfs(x, y):
 
 cnt = 0
 res = 0
-for i in range(N):
+for idx in range(N):
     for j in range(N):
-        if ch[i][j] == 0 and home[i][j] == 1:
-            dfs(i, j)
+        if ch[idx][j] == 0 and home[idx][j] == 1:
+            dfs(idx, j)
 
 
             

@@ -8,23 +8,23 @@ def priority(i):
     else:
         return 0
 stack = []
-for i in calculator:
-    if i == '(':
-        stack.append(i)
-    elif i.isdigit():
-        print(i, end='')
-    elif i == ')':
+for idx in calculator:
+    if idx == '(':
+        stack.append(idx)
+    elif idx.isdigit():
+        print(idx, end='')
+    elif idx == ')':
         while stack and stack[-1] != '(':
             print(stack.pop(), end='')
         stack.pop()
-    elif i == '*' or i == '/':
+    elif idx == '*' or idx == '/':
         while stack and (stack[-1] == '*' or stack[-1] == '/'):
             print(stack.pop(), end ='')
-        stack.append(i)
-    elif i == '+' or i == '-':
+        stack.append(idx)
+    elif idx == '+' or idx == '-':
         while stack and stack[-1] != '(':
             print(stack.pop(), end ='')
-        stack.append(i)
+        stack.append(idx)
 while stack:
     print(stack.pop(), end='')
 

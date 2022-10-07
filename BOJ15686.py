@@ -24,12 +24,12 @@ def dfs(v, s):
             pick[v] = i
             dfs(v + 1, i + 1)
 
-for i in range(N):
+for idx in range(N):
     for j in range(N):
-        if board[i][j] == 1:
-            hs.append((i, j))
-        elif board[i][j] == 2:
-            ch.append((i, j))
+        if board[idx][j] == 1:
+            hs.append((idx, j))
+        elif board[idx][j] == 2:
+            ch.append((idx, j))
 
 res = 2147000000
 len_ch = len(ch)

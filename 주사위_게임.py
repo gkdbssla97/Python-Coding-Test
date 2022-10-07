@@ -1,7 +1,7 @@
 N = int(input())
 
 max_list = []
-for i in range(N):
+for idx in range(N):
     dice = list(map(int, input().split()))
     if dice[0] == dice[1] == dice[2]:
         print(1)

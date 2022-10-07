@@ -32,10 +32,10 @@ while True:
     cnt = 1
     mid = (lt + rt) // 2
     tmp = location[0]
-    for i in location:
-        if abs(tmp - i) >= mid:
+    for idx in location:
+        if abs(tmp - idx) >= mid:
             cnt += 1
-            tmp = i
+            tmp = idx
     if cnt < C:
         rt = mid - 1
     elif cnt >= C:
