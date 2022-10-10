@@ -32,8 +32,8 @@ else:
         idx += 1
     print(res)
 
-# words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
-# for i in range(len(words)):
-#     s = s.replace(words[i], str(i))
-#     print(s)
-# print(s)
+words = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+for i in range(len(words)):
+    s = s.replace(words[i], str(i))
+    print(s)
+print(s)
