@@ -28,7 +28,7 @@ def dijkstra(graph, start):
             distance = current_distance + new_distance
             if distance < distances[new_destination]:
                 distances[new_destination] = distance
-                heapq.heappush(q, [distance, new_destination])
+                print(heapq.heappush(q, [distance, new_destination]))
 
     return distances
 
