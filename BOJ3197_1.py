@@ -34,14 +34,14 @@ def bfs():
     q = deque(wq)
     while q:
         x, y = q.popleft()
-        board[x][y] = '.'
+        # board[x][y] = '.'
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
             if 0 <= nx < R and 0 <= ny < C and water_visited[nx][ny] == 0:
                 if board[nx][ny] == 'X':
                     water.append((nx, ny))
-                    #board[nx][ny] = '.'
+                    board[nx][ny] = '.'
                 elif board[nx][ny] == '.':
                     wq.append((nx, ny))
                 water_visited[nx][ny] = 1
@@ -67,12 +67,12 @@ for i in range(R):
             water_visited[i][j] = 1
 
 #print(sq, q)
-cnt = 0
+cnt = 1
 while True:
     bfs()
     if find_swan():
         break
-    #print(f'sq, swan:{sq}, {swan}')
+    # print(f'sq, swan:{sq}, {swan}')
     sq = swan
     wq = water
     swan = deque()

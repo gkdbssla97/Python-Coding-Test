@@ -1,84 +1,33 @@
+from collections import deque
 from itertools import combinations
 
-def dfs(v):
-    ch[v] = 1
-    for i in board[v]:
-        if ch[i] == 0:
-            ch[i] = 1
-            #print(ch)
-            dfs(i)
-
-
 N = int(input())
+res = 2147000000
 population = list(map(int, input().split()))
-area = []
-board = [[] for _ in range(11)]
-res = int(1e9)
-
-for idx in range(N):
+board = [[] for _ in range(10)]
+def bfs(combi):
+    start = combi[0]
+    q = deque([start])
+    ch = set([start])
+    _sum = 0
+    while q:
+        v = q.popleft()
+        _sum += population[v]
+        for i in board[v]:
+            if i in combi and i not in ch:
+                ch.add(i)
+                q.append(i)
+    return _sum, len(ch)
+for i in range(N):
     area = list(map(int, input().split()))
-    for i in range(1, len(area)):
-        board[idx + 1].append(area[i])
-#print(board)
+    for j in range(1, len(area)):
+        board[i].append(area[j] - 1)
 
-combi = [i for i in range(1, N + 1)]
-X, Y = 0, N
-for val in range(1, N // 2 + 1):
-    X, Y = X + 1, Y - 1
-    for y in list(combinations(combi, Y)):
-        flag, flag_x, flag_y = 0, 0, 0
-        sum_x, sum_y = 0, 0
-        x = set(combi).difference(y)
-        x = list(x)
-        y = list(y)
-        ch = [0] * (N + 1)
-        #print(y, x)
-        for yy in y:
-            sum_y += population[yy - 1]
-        #print(f'sum_y:{sum_y}')
-        for xx in x:
-            sum_x += population[xx - 1]
-        #print(f'sum_x:{sum_x}')
-        dfs(x[0])
-        chk_list = []
-        for i in range(1, N + 1):
-            if ch[i] == 1:
-                chk_list.append(i)
-        #print(f'x_chk: {chk_list}')
-        for val in x:
-            if val not in chk_list:
-                flag_x = 1
-                #print('x')
-                break
-        ch = [0] * (N + 1)
-        dfs(y[0])
-        chk_list = []
-        for i in range(1, N + 1):
-            if ch[i] == 1:
-                chk_list.append(i)
-        #print(f'y_chk: {chk_list}')
-        for val in y:
-            if val not in chk_list:
-                flag_y = 1
-                #print('y')
-                break
-        #print(ch.count(1))
-        #print(board)
-        if flag_x == 0 and flag_y == 0:
-            if res > abs(sum_x - sum_y):
-                res = abs(sum_x - sum_y)
-                #print(f'res:{res}')
-        ch = [0] * (N + 1)
-        #print('--------')
-print(res if res != int(1e9) else -1)
-
-
-'''
- 2
-1 3
- 
- 6
-4 5 
-  
-
-'''
+for i in range(1, N // 2 + 1):
+    combis = list(combinations(range(N), i))
+    for combi in combis:
+        sum1, v1 = bfs(combi)
+        sum2, v2 = bfs([i for i in range(N) if i not in combi])
+        if v1 + v2 == N:
+            res = min(res, abs(sum1 - sum2))
+print(res if res != 2147000000 else -1)
