@@ -1,35 +1,33 @@
 import math
 
-n = 110011
-k = 10
+def changenumber(n, k):
+    res = ""
+    while n != 0:
+        res += str(n % k)
+        n //= k
+    res = res[::-1]
+    print(res)
+    return res
 
+def prime(x):
+    x = int(x)
+    flag = False
+    for i in range(2, (int)(math.sqrt(x)) + 1):
+        if x % i == 0:
+            flag = True
+            break
+
+    return flag
 
 def solution(n, k):
-
-    arr = ""
-    while n != 0:
-        arr = str(n % k) + arr
-        n //= k
-
-    res = arr.split('0')
-    #print(res)
+    split = changenumber(n, k).split('0')
+    print(split)
     cnt = 0
-
-    for i in res:
-        if len(i) == 0:
+    for x in split:
+        if x == '1' or x == '':
             continue
-        if int(i) < 2:
-            continue
-
-        else:
-            sosu = True
-            for x in range(2, int(math.sqrt(int(i)) + 1)):
-                if int(i) % x == 0:
-                    sosu = False
-            if sosu:
-                cnt += 1
-    # print(cnt)
+        elif not prime(x):
+            cnt += 1
 
     return cnt
 
-print(solution(n, k))
