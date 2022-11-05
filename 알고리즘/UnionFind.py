@@ -1,3 +1,4 @@
+N = int(input())
 val = [0] + list(map(int, input().split()))
 parent = [i for i in range(N + 1)]
 
