@@ -1,10 +1,10 @@
 import sys
 import heapq
 
+INF = int(1e9)
 input = sys.stdin.readline
 N, M = map(int, input().split())
 
-INF = int(1e9)
 graph = [[INF] * (N + 1) for _ in range(N + 1)]
 
 for i in range(N + 1):
@@ -24,7 +24,8 @@ for k in range(N + 1):
 
 X, K = map(int, input().split())
 
-print(graph[1][K] + graph[K][X] if graph[1][K] + graph[K][X] != 2 * INF else -1)
+print(graph[1][K] + graph[K][X]
+      if graph[1][K] + graph[K][X] != 2 * INF else -1)
 
 '''
 5 7
